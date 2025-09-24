@@ -1,0 +1,21 @@
+[project]
+name = "studymode-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Haider", email = "iamhaider072@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.117.1",
+    "openai-agents>=0.3.2",
+    "python-dotenv>=1.1.1",
+]
+
+[project.scripts]
+studymode-backend = "studymode_backend:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
