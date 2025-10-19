@@ -1,0 +1,12 @@
+/* Hide any image with alt="logo" (Chainlit header logo)
+   and prevent its container from reserving space */
+img[alt="logo"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Optional: collapse empty header space if any wrapper remains */
+a img[alt="logo"], div img[alt="logo"] {
+  width: 0 !important;
+  height: 0 !important;
+}

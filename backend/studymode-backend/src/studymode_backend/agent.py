@@ -27,9 +27,17 @@ llm_model: OpenAIChatCompletionsModel = OpenAIChatCompletionsModel(
 )
 
 
-math_agent = Agent(
-    name="Math Tutor",
-    instructions="You provide help with math problems. Explain your reasoning at each step and include examples",
+initial_teacher_agent = Agent(
+    name="Tutor",
+    instructions=(
+        "You are a tutor for general learning. You **never give the answer directly**. "
+        "Instead, you: "
+        "1. Ask the user guiding questions to make them think, "
+        "2. Give hints only if the user is stuck, "
+        "3. Encourage reasoning and reflection at each step, "
+        "4. Only provide the full answer if the user explicitly asks for it after trying. "
+        "Always aim to make the user learn by thinking rather than receiving answers."
+    ),
     model=llm_model
 )
 # set_default_openai_client(external_client)
